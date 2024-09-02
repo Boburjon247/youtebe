@@ -1,0 +1,18 @@
+.inputSearch{
+    border: none;
+    outline: none;
+    width: 350px;
+    padding: 5px;
+    background-color: #1e2b46 !important;
+    color: #fff;
+    font-size: 16px;
+}
+.searchBar{
+    background-color: #1e2b46 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.searchIcon{
+    color:  #fff !important;
+}

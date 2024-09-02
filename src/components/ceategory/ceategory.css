@@ -1,0 +1,30 @@
+
+.catigory-btn:nth-child(1){
+    margin-left: 0 !important;
+}
+.catigory-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 8px 12px;
+    color: #fff;
+    margin-left: 10px;
+    background-color: #111827;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid transparent;
+
+
+}
+.catigory-btn:hover{
+    background-color: #1E2B46 !important;
+    color: orange !important;
+    transition: .3s;
+    border: 1px solid orange;
+
+}
+.catigory-btn:hover span{
+    transition: .3s;
+    color: orange !important;
+}

@@ -1,0 +1,10 @@
+.cardContent{
+    overflow: hidden !important;
+    background-color: #1E2B46;
+    height: 200px;
+    position: relative;
+}
+.CardMedia{
+    width: 100%;
+    height: 180px;
+}
