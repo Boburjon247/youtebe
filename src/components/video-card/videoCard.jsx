@@ -3,7 +3,7 @@ import { Avatar, Card, CardContent, CardMedia, Stack, Typography } from "@mui/ma
 import { colors } from '../../constants/color'
 import moment from 'moment'
 import { CheckCircle } from "@mui/icons-material";
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 const VideoCard = ({ video }) => {
     return (
@@ -22,19 +22,19 @@ const VideoCard = ({ video }) => {
             </Link>
             <CardContent className='cardContent'>
                 <>
-                    <Link to={`/video/${video.id.videoId}`}>
-                        <Typography my={'5px'} sx={{ opacity: '0.4' }}>
-                            {moment(video?.snippet?.publishedAt).fromNow()}
-                        </Typography>
-                        <Typography variant="subtitle1" fontWeight={'bold'}>
-                            {video?.snippet?.title.slice(0, 35)}
-                        </Typography>
-                        <Typography variant="subtitle2" sx={{ opacity: '0.6' }}>
-                            {video?.snippet?.description.slice(0, 35)}
-                        </Typography>
-                    </Link>
+                <Link to={`/video/${video.id.videoId}`}>
+                    <Typography my={'5px'} sx={{ opacity: '0.4' }}>
+                        {moment(video?.snippet?.publishedAt).fromNow()}
+                    </Typography>
+                    <Typography variant="subtitle1" fontWeight={'bold'}>
+                        {video?.snippet?.title?.slice(0, 35)}
+                    </Typography>
+                    <Typography variant="subtitle2" sx={{ opacity: '0.6' }}>
+                        {video?.snippet?.description?.slice(0, 35)}
+                    </Typography>
+                </Link>
                 </>
-                <>
+                <Link to={`/channel/${video?.snippet?.channelId}`}>
                     <Stack direction={'row'} position={'absolute'} bottom={'10px'} alignContent={'center'} gap={'5px'}>
                         <Avatar src={video?.snippet?.thumbnails?.high?.url} />
                         <Typography variant="subtitle2" color="orange">
@@ -42,7 +42,7 @@ const VideoCard = ({ video }) => {
                             <CheckCircle sx={{ fontSize: '12px', color: 'orange', ml: '5px' }} />
                         </Typography>
                     </Stack>
-                </>
+                </Link>
             </CardContent>
         </Card>
     )

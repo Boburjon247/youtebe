@@ -15,9 +15,9 @@ const Videos = ({ videos }) => {
       }}
     >
       {videos.map(item => (
-        <Box key={item.id.videoId}>
-          {(item.id.videoId || item.id.videoId != 'undefined') && <VideoCard video={item} />}
-          {item.id.channelId && <ChannelCard video={item} />}
+        <Box key={item?.id?.videoId}>
+          {(item?.id?.videoId || item?.id?.videoId != 'undefined') && <VideoCard video={item} />}
+          {item?.id?.channelId && <ChannelCard video={item} />}
         </Box>
       ))}
     </Stack>

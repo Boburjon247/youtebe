@@ -17,7 +17,7 @@ const Main = () => {
 
     const getData = async()=>{
       try {
-        const data = await ApiService.fetching(`search?part=snippet&q=${selectetCatigorya}`)
+        const data = await ApiService.fetching(`search?part=snippet%2Cid&order=date&q=${selectetCatigorya}`)
         setVideos(data.items)
         
       } catch (error) {
